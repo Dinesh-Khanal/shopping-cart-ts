@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1662460034873" clover="3.2.0">
-  <project timestamp="1662460034873" name="All files">
-    <metrics statements="87" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="39" coveredmethods="0" elements="142" coveredelements="0" complexity="0" loc="87" ncloc="87" packages="4" files="10" classes="10"/>
+<coverage generated="1662625063142" clover="3.2.0">
+  <project timestamp="1662625063143" name="All files">
+    <metrics statements="87" coveredstatements="6" conditionals="16" coveredconditionals="0" methods="39" coveredmethods="2" elements="142" coveredelements="8" complexity="0" loc="87" ncloc="87" packages="4" files="10" classes="10"/>
     <package name="src">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\hp\Desktop\redux-shopping-cart\src\App.tsx">
@@ -109,7 +109,7 @@
       </file>
     </package>
     <package name="src.features.products">
-      <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <metrics statements="14" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="2"/>
       <file name="Products.tsx" path="C:\Users\hp\Desktop\redux-shopping-cart\src\features\products\Products.tsx">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
@@ -122,13 +122,13 @@
         <line num="32" count="0" type="stmt"/>
       </file>
       <file name="productSlice.ts" path="C:\Users\hp\Desktop\redux-shopping-cart\src\features\products\productSlice.ts">
-        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
       </file>
     </package>
   </project>

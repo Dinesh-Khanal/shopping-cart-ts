@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { setProducts } from "./productSlice";
-import { getProducts } from "../../app/api";
-import cartSlice, { addToCart } from "../../features/cart/cartSlice";
+import { fetchProducts } from "./productSlice";
+import { addToCart } from "../../features/cart/cartSlice";
 import styles from "./Products.module.css";
 
 export function Products() {
   const dispatch = useAppDispatch();
   useEffect(() => {
-    getProducts().then((products) => {
-      dispatch(setProducts(products));
-    });
+    dispatch(fetchProducts());
   }, []);
   const products = useAppSelector((state) => state.products.products);
+  const state = useAppSelector((state) => state.products.fetchProductState);
+  const fetchError = useAppSelector((state) => state.products.errorMessage);
+  if (state === "LOADING") return <div>Loading...</div>;
   return (
     <main className="page">
+      {fetchError && <div style={{ color: "red" }}>Error: {fetchError}</div>}
       <ul className={styles.products}>
         {Object.values(products).map((product) => (
           <li key={product.id}>

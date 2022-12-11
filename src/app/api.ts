@@ -9,6 +9,7 @@ export interface Product {
 }
 
 export async function getProducts(): Promise<Product[]> {
+  await sleep(500); //this is only for simulating as async request;
   const results = await fetch("/products.json");
   const products = results.json();
   return products;
@@ -33,5 +34,4 @@ export async function checkout(items: CartItems): Promise<CheckoutResponse> {
 }
 
 // utility function to simulate slowness in an API call
-const sleep = (time: number) =>
-  new Promise((res) => setTimeout(res, time));
+const sleep = (time: number) => new Promise((res) => setTimeout(res, time));

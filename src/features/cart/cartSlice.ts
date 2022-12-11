@@ -19,6 +19,11 @@ const initialState: CartState = {
   checkoutState: "READY",
   errorMessage: "",
 };
+
+//createAsyncThunk has two argument first one is string specifying the thunk name and and the second
+// is async function which will return promise.
+// the first argument of async function is argument to pass in the function and the second argument
+// ie.(thunkAPI) is used to getState and other properties.
 export const checkoutCart = createAsyncThunk(
   "cart/checkout",
   async (_, thunkAPI) => {

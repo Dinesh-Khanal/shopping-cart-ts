@@ -1,37 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Products } from "./features/products/Products";
-import { CartLink } from "./features/cart/CartLink";
+import Layout from "./features/layout/Layout";
 import { Cart } from "./features/cart/Cart";
-import styles from "./App.module.css";
 
 function App() {
   return (
     <Router>
-      <div className={styles.app}>
-        <header className={styles.header}>
-          <nav>
-            <Link className={styles.navLink} to="/">
-              Home
-            </Link>
-            <Link className={styles.navLink} to="/products">
-              Products
-            </Link>
-            <CartLink />
-          </nav>
-        </header>
-      </div>
-      <Switch>
-        <Route exact path="/">
-          <Home />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
-        <Route path="/products">
-          <Products />
-        </Route>
-        <Route path="/cart">
-          <Cart />
-        </Route>
-      </Switch>
+      </Routes>
     </Router>
   );
 }
